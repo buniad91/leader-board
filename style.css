@@ -1,24 +1,30 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(236, 236, 236);
-   
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*===== top players name & blogs start===== */
 .conatiner{
     background-color: white;
     width: 1300px;
+    padding-bottom: 30px;
+    margin-top: 25px;
+    border-radius: 10px;
 }
 h2{
     color: blue;
     margin-top: 19.77px;
+    margin-left: 50px;
     padding-top: 20px;
-    padding-left: 20px;
+
 }
 .top-players{
     display:grid;
@@ -42,4 +48,127 @@ h2{
 hr{
     border: 1px solid rgb(167, 167, 167);
     margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+/* -----------------blogs start------------- */
+.top-blogs{
+     margin-left: 50px;
+     grid-gap: 30px;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+.blogs{
+    display: flex;
+}
+.blogs .thambnail img{
+    width: 300px;
+}
+
+.blog-info{
+    margin-left: 20px;
+}
+
+.blog-info h3{
+    font-size: 25px;
+}
+
+.blog-info p{
+    color: silver;
+    font-size: 18px;
+}
+.blog-info a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* --------------------------Lates Course----------------- */
+
+.courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.course{
+    width: 340px;
+    box-shadow: 0 4px 8px 0 rgb(199, 199, 199);
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.course-detail{
+    padding: 10px;
+}
+.course .thambnail img{
+    width: 310px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.course-info{
+    display: flex; 
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+    
+}
+
+.icons img{
+    width: 20px;
+}
+
+.retings{
+    color: silver;
+    font-size: 20px;
+}
+
+.course-time{
+   background-color: coral;
+   padding: 5px 20px 3px 20px;
+   font-size: 20px;
+   color: white;
+   border-radius: 30px;
+   box-shadow: 0 4px 8px 0 rgb(240, 143, 125);
+}
+
+
+
+
+
+
+
+
+/* =============================Media Queries============================ */
+
+/* ----------Mobile Decice------- */
+@media screen and (max-width:688px) {
+    .conatiner{
+        width: 100%;
+    }
+    .top-players, .top-blogs, .courses{
+        grid-template-columns:repeat(1, 1fr);
+    }
+    .players, .blogs{
+        flex-direction: column;
+    }
+}
+
+
+/* ---------Tablet Devices-------- */
+@media screen   and (min-width: 688px) and (max-width:992px) {
+    .conatiner{
+        width: 100%;
+    }
+    .top-players , .top-blogs, .courses{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .players, .blogs, .course{
+        flex-direction: column;
+    }
 }
